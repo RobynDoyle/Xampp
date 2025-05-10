@@ -27,7 +27,7 @@ $server="localhost";
 $dbuser="root";
 $password="";
 $link=mysqli_connect($server,$dbuser,$password);
-mysqli_select_db($link, "giftcompany");
+mysqli_select_db($link, "property");
 $sql="SELECT * from comment WHERE status='planned'";
 $result=mysqli_query($link, $sql);
 if (mysqli_num_rows($result)>0) 

@@ -25,7 +25,7 @@
 <?php
 require 'connect.php';
 $categoryid= $_GET["categoryid"];
-$sql="SELECT * from product, category WHERE product.categoryid=$categoryid AND category.categoryid=$categoryid";
+$sql="SELECT * from property, category WHERE property.categoryid=$categoryid AND category.categoryid=$categoryid";
 $result=mysqli_query($link, $sql);
 if(mysqli_num_rows($result)>0)
 {
@@ -48,7 +48,7 @@ echo  "<p class='card-title fw-bold'>$product</p>";//output the product name in 
 echo "<p>&euro; $price</p>"; //output the euro sign and price
 echo "<p class='card-text'> $productdesc</p>"; //output the product description
 echo "<div class='card-footer text-center'>"; //this BS card footer div contains the moredetails button
-echo "<p><a class='btn btn-outline-primary' href='moredetails.php?productid=$productid'>Details</a></p>";
+echo "<p><a class='btn btn-outline-warning' href='moredetails.php?productid=$productid'>Details</a></p>";
 echo "</div>"; //close the card-footer div
 echo "</div>"; //close the card-body div
 echo "</div>"; //close the card

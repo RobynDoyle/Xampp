@@ -1,4 +1,4 @@
-<!-- this detects the current script being executed. this is needed to set the active tag in the nav menu items. -->
+<!-- this sets up a var set to current page. this is needed to set the active tag in the nav menu items. -->
 <?php
 $current_page = basename($_SERVER['PHP_SELF']);
 ?>
@@ -18,12 +18,13 @@ $current_page = basename($_SERVER['PHP_SELF']);
         </li>
         <li class="nav-item dropdown">
             <!-- the line below dynamically sets the active tag -->
-          <a class="nav-link dropdown-toggle <?php if(in_array($current_page, ['AllProperties.php', 'Residential.php', 'Commercial.php', 'Sites.php'])) echo 'active'; ?>" href="#" id="dropdown04" data-bs-toggle="dropdown" aria-expanded="false">Listings</a>
+            <a class="nav-link dropdown-toggle <?php 
+                if ($current_page == 'displayallproductscards.php' || ($current_page == 'displayproductsbycat.php' && isset($_GET['categoryid']) && in_array($_GET['categoryid'], ['1','2','3']))) echo 'active'; ?>"href="#" id="dropdown04" data-bs-toggle="dropdown" aria-expanded="false">Listings</a>
           <ul class="dropdown-menu" aria-labelledby="dropdown04">
-            <li><a class="dropdown-item" href="#">All Properties</a></li>
-            <li><a class="dropdown-item" href="#">Residential</a></li>
-            <li><a class="dropdown-item" href="#">Commercial</a></li>
-            <li><a class="dropdown-item" href="#">Sites</a></li>
+            <li><a class="dropdown-item" href="displayallproductscards.php">All Properties</a></li>
+            <li><a class="dropdown-item" href="displayproductsbycat.php?categoryid=1">Residential</a></li>
+            <li><a class="dropdown-item" href="displayproductsbycat.php?categoryid=2">Commercial</a></li>
+            <li><a class="dropdown-item" href="displayproductsbycat.php?categoryid=3">Sites</a></li>
           </ul>
         </li>
         <li class="nav-item">

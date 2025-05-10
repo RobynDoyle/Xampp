@@ -10,3 +10,8 @@ footer a {text-decoration: none;}
 .card-footer {
     padding: 10px !important; /* Adjust padding within card footer */
 }
+
+  /* forces Listings button to selected when active */
+  .nav-link.active.dropdown-toggle {
+    color: white !important;
+  }

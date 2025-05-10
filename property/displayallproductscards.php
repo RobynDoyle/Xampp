@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-  <title>page title</title>
+  <title>All Properties</title>
   <meta charset="utf-8">
  <link rel="stylesheet" href="css/stylesbs.css">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -23,7 +23,7 @@
 <section class="p-3 mt-3">
 <?php
 require "connect.php"; //access the connection code
-$sql="SELECT * from product";
+$sql="SELECT * from property";
 $result=mysqli_query($link, $sql);
 if(mysqli_num_rows($result)>0) //check there are records in the result set
 {
@@ -47,7 +47,7 @@ echo "<p class='card-title fw-bold'>$product</p>";//output the product name in b
 echo "<p>&euro; $price</p>"; //output the euro sign and price
 echo "<p class='card-text'> $productdesc</p>"; //output the product description
 echo "<div class='card-footer text-center mt-auto'>"; //this BS card footer div contains the moredetails button
-echo "<p><a class='btn btn-outline-primary' href='moredetails.php?productid=$productid'>Details</a></p>";
+echo "<p><a class='btn btn-outline-warning' href='moredetails.php?productid=$productid'>Details</a></p>";
 echo "</div>"; //close the card-footer div
 echo "</div>"; //close the card-body div
 echo "</div>"; //close the card

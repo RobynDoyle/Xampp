@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-  <title>page title</title>
+  <title>Index</title>
   <meta charset="utf-8">
  <link rel="stylesheet" href="css/stylesbs.css">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -22,8 +22,10 @@
 
 <section class="p-3 mt-3">
 <div class="container-lg feedback">
-    <h4>Welcome to the Gift Company!</h4>
-    Content will go here - maybe some info about the company, what we do and a search perhaps...
+    <h4>Welcome to ROYLE Properties</h4>
+    <p>We are the number choice for buying and selling property in the California area. </p>
+
+   <p>Navigate through our website using the menu above.</p>
 </div>
 </section>
 <?php include("includes/footer.html");?>
