@@ -1,0 +1,12 @@
+footer a {text-decoration: none;}
+.feedback { /* used for pages with little content to push footer down */
+    min-height: 450px; 
+  }
+
+.card-body {
+    padding: 10px !important; /* Adjust padding within card body */
+}
+
+.card-footer {
+    padding: 10px !important; /* Adjust padding within card footer */
+}
