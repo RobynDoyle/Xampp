@@ -103,19 +103,19 @@
                 <img src="Assets/residential.png" alt="Residential" class="rounded-circle" style="width: 160px; height: 160px; object-fit: cover;">
                   <h2 class="fw-normal">Residential</h2>
                 <p>Explore all of our listings in the Residential property sector. From Houses to Apartments, Condos to Holiday Homes, we got your next residential property listed here.</p>
-                <p><a class="btn btn-warning" href="#">Explore »</a></p>
+                <p><a class="btn btn-warning" href="displayproductsbycat.php?categoryid=1">Explore »</a></p>
               </div><!-- /.col-lg-4 -->
               <div class="col-lg-4">
                 <img src="Assets/commercial.jpg" alt="Commercial" class="rounded-circle" style="width: 160px; height: 160px; object-fit: cover;">
                 <h2 class="fw-normal">Commercial</h2>
                 <p>All commerical properties viewable with a single click. From Offices and Warehouses, to Shops and Stores, take a browse through our wide range of offerings.</p>
-                <p><a class="btn btn-warning" href="#">Explore »</a></p>
+                <p><a class="btn btn-warning" href="displayproductsbycat.php?categoryid=2">Explore »</a></p>
               </div><!-- /.col-lg-4 -->
               <div class="col-lg-4">
                 <img src="Assets/site3.jpg" alt="Sites" class="rounded-circle" style="width: 160px; height: 160px; object-fit: cover;">
                 <h2 class="fw-normal">Sites</h2>
                 <p>We have an extensive set of Sites listed in this section. Whether you are looking to build a Home, Skyscraper, Amusement Park or Stadium, we have the site for you!</p>
-                <p><a class="btn btn-warning" href="#">Explore »</a></p>
+                <p><a class="btn btn-warning" href="displayproductsbycat.php?categoryid=3">Explore »</a></p>
               </div><!-- /.col-lg-4 -->
             </div><!-- /.row -->
         
@@ -132,7 +132,7 @@
                     <a class="btn btn-warning me-3" href="#">View this property »</a>
                     <h5 class="mb-0 fw-bold">Asking Price: $395,000</h5>
                   </div>
-                <p><a class="btn btn-warning me-3" href="#">Browse for similiar »</a></p>
+                <p><a class="btn btn-warning me-3" href="displayproductsbycat.php?categoryid=1">Browse for similiar »</a></p>
               </div>
               <div class="col-md-5">
                 <img src="Assets/firstTimeBuyer.jpg" class="d-block w-100 h-100 object-fit-cover" alt="First time buyer home">
@@ -149,7 +149,7 @@
                     <a class="btn btn-warning me-3" href="#">View this property »</a>
                     <h5 class="mb-0 fw-bold">Asking Price: $290,000</h5>
                   </div>
-                <p><a class="btn btn-warning" href="#">Browse for similiar »</a></p>
+                <p><a class="btn btn-warning" href="displayproductsbycat.php?categoryid=1">Browse for similiar »</a></p>
               </div>
               <div class="col-md-5 order-md-1">
                 <img src="Assets/downsize.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Down sizing home">
@@ -165,7 +165,7 @@
                 <div class="d-flex align-items-center mb-3">
                     <a class="btn btn-warning me-3" href="#">View this property »</a>
                     <h5 class="mb-0 fw-bold">Asking Price: $579,000</h5>
-                  </div>                <p><a class="btn btn-warning" href="#">Browse for similiar »</a></p>
+                  </div>                <p><a class="btn btn-warning" href="displayproductsbycat.php?categoryid=1">Browse for similiar »</a></p>
               </div>
               <div class="col-md-5">
                 <img src="Assets/firstTIme2.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Down sizing home">

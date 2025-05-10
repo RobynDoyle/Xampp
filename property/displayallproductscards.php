@@ -33,21 +33,22 @@ echo "<div class='row justify-content-left my-5'>";//set up a BS row for the car
 
 while($row=mysqli_fetch_array($result)) //while there are records in the array
 {
-$productid=$row["productid"];
+$propertyid=$row["propertyid"];
 $image=$row["image"];
-$product=$row["productname"];
-$productdesc=$row["description"];
+$town=$row["town"];
+$productdesc=$row["shortdescription"];
 $price=$row["price"];
+$displayprice=number_format($price);
 echo "<div class='col-lg-3 col-md-4 mb-3'>";//creates a responsive BS column to house each card
 echo "<div class='card h-100 d-flex flex-column'>"; //create a card - each card is a child of the BS row
 echo "<img src='$image' class='card-img-top' style='height:190px; object-fit: cover;' alt='product'>";
-echo "<div class='card-body flex-grow-1'>"; //this BS div adds a horizontal rule and holds the product name, description and price
+echo "<div class='card-body flex-grow-1'>"; //this BS div adds a horizontal rule and holds the property  location , description and price
 echo "<hr>";
-echo "<p class='card-title fw-bold'>$product</p>";//output the product name in bold
-echo "<p>&euro; $price</p>"; //output the euro sign and price
-echo "<p class='card-text'> $productdesc</p>"; //output the product description
+echo "<p class='card-title fw-bold'>$town</p>";//output the property location
+echo "<p>&dollar; $displayprice</p>"; //output the dollar sign and price
+echo "<p class='card-text'> $productdesc</p>"; //output the property description
 echo "<div class='card-footer text-center mt-auto'>"; //this BS card footer div contains the moredetails button
-echo "<p><a class='btn btn-outline-warning' href='moredetails.php?productid=$productid'>Details</a></p>";
+echo "<p><a class='btn btn-outline-warning' href='moredetails.php?propertyid=$propertyid'>Details</a></p>";
 echo "</div>"; //close the card-footer div
 echo "</div>"; //close the card-body div
 echo "</div>"; //close the card
