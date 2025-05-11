@@ -55,7 +55,7 @@
 
                     <h1>Sea Side Holiday Home</h1>
                     <p>Boasting beach front access and fantastic features this newly listed property is the holiday home of dreams. Now available for viewing.</p>
-                    <p><a class="btn btn-lg btn-warning" href="#">View property</a></p>
+                    <p><a class="btn btn-lg btn-warning" href="moredetails.php?propertyid=11">View property</a></p>
                   </div>
                 </div>
               </div>
@@ -129,7 +129,7 @@
                 <h2 class="featurette-heading fw-normal lh-1">First time buyer? <span class="text-body-secondary">Check out this home!</span></h2>
                 <p class="lead">This stunning 1960's house on the edge of LA is the perfect place to call your first home. With a lovely back garden and generous facilites, it is truly a gem of a home. The local area has a school, hospital and shopping mall within walking distance. </p>
                 <div class="d-flex align-items-center mb-3">
-                    <a class="btn btn-warning me-3" href="#">View this property »</a>
+                    <a class="btn btn-warning me-3" href="moredetails.php?propertyid=8">View this property »</a>
                     <h5 class="mb-0 fw-bold">Asking Price: $395,000</h5>
                   </div>
                 <p><a class="btn btn-warning me-3" href="displayproductsbycat.php?categoryid=1">Browse for similiar »</a></p>
@@ -146,7 +146,7 @@
                 <h2 class="featurette-heading fw-normal lh-1">Thinking of down sizing? <span class="text-body-secondary">Look no further!</span></h2>
                 <p class="lead">Is it time to move into a more comfortable and easy to maintain home? Then this may be the home you were looking for. Situated in the heart of LA's natural beauty this modern and sleek property provides all the benefits of modern living and more!</p>
                 <div class="d-flex align-items-center mb-3">
-                    <a class="btn btn-warning me-3" href="#">View this property »</a>
+                    <a class="btn btn-warning me-3" href="moredetails.php?propertyid=9">View this property »</a>
                     <h5 class="mb-0 fw-bold">Asking Price: $290,000</h5>
                   </div>
                 <p><a class="btn btn-warning" href="displayproductsbycat.php?categoryid=1">Browse for similiar »</a></p>
@@ -161,9 +161,9 @@
             <div class="row featurette">
               <div class="col-md-7">
                 <h2 class="featurette-heading fw-normal lh-1">Your next home?<span class="text-body-secondary"> Explore this property! </span></h2>
-                <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+                <p class="lead">Modern and sleek home in the heart of the hills. This amazing property has everything you need to enjoy peaceful weekneds and short commuting times into work.</p>
                 <div class="d-flex align-items-center mb-3">
-                    <a class="btn btn-warning me-3" href="#">View this property »</a>
+                    <a class="btn btn-warning me-3" href="moredetails.php?propertyid=10">View this property »</a>
                     <h5 class="mb-0 fw-bold">Asking Price: $579,000</h5>
                   </div>                <p><a class="btn btn-warning" href="displayproductsbycat.php?categoryid=1">Browse for similiar »</a></p>
               </div>

@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-  <title>page title</title>
+  <title>Property</title>
   <meta charset="utf-8">
  <link rel="stylesheet" href="css/stylesbs.css">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -27,27 +27,46 @@ require "connect.php"; //access the connection code
 $propertyid= $_GET["propertyid"];
 $sql= "SELECT * FROM property WHERE propertyid=$propertyid";
 $result=mysqli_query($link, $sql);
-$row=mysqli_fetch_array($result);
+$row = mysqli_fetch_array($result);
 
-    $town=$row["town"];
-    $price=$row["price"];
-    $description=$row["shortdescription"];
-    $longdescription=$row["longdescription"];
-    $image=$row["image"];
-    echo "<div class='container-lg'>";//set up the BS container to keep margins consistent
-    echo "<h4>" . htmlspecialchars($town) . "</h4><br>";
-    echo "<img src='$image' style='height:500px; object-fit: cover;'  alt='htmlspecialchars($property)'>";
-    echo "<h5>Property Description</h5>" . htmlspecialchars($description) .  "<br><br>";
-    echo "<h5>Property Details </h5>" . htmlspecialchars($longdescription) . "<br><br>";
-    echo "<h5>Price </h5> &dollar;" . number_format($price,2) . "</br><br>";
-    mysqli_close($link);
-?>
-<p>
-<button class="btn btn-outline-warning mt-3" onclick="goBack()">Go Back to Product Listing</button>
-<script>
-function goBack() {
-    window.history.back();
+$town = $row["town"];
+$address = $row["address1"];
+$price = $row["price"];
+$description = $row["shortdescription"];
+$longdescription = $row["longdescription"];
+$image = $row["image"];
+$bedrooms = $row["bedrooms"];
+
+echo "<div class='container-lg mt-5'>";
+echo "<div class='card shadow-lg border-0'>";
+echo "<div class='row g-0'>";
+echo "<div class='col-md-6'>";
+echo "<img src='" . htmlspecialchars($image) . "' class='img-fluid rounded-start w-100' style='height:100%; object-fit:cover;' alt='Property image'>";
+echo "</div>";
+echo "<div class='col-md-6'>";
+echo "<div class='card-body'>";
+echo "<h4 class='card-title mb-3'>" . htmlspecialchars($address) . ", " . htmlspecialchars($town) . "</h4>";
+echo "<h5 class='text-muted mb-3'>&dollar;" . number_format($price, 2) . "</h5>";
+echo "<p><strong>Short Description:</strong><br>" . htmlspecialchars($description) . "</p>";
+if ($bedrooms > 0) {
+    echo "<p><strong>Bedrooms:</strong> " . htmlspecialchars($bedrooms) . "</p>";
 }
+echo "<p><strong>Full Details:</strong><br>" . nl2br(htmlspecialchars($longdescription)) . "</p>";
+
+echo "<p><a class='btn btn-lg btn-warning' href='displayallproductscards.php'>Listings</a></p>";
+
+echo "</div>"; // close card-body
+echo "</div>"; // close col-md-6
+echo "</div>"; // close row
+echo "</div>"; // close card
+echo "</div>"; // close container
+
+mysqli_close($link);
+
+?>
+
+<script>
+
 </script>
 </div> <!--close the BS container-->
 
