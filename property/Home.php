@@ -67,7 +67,7 @@
 
                     <h1>New Commercial Offices</h1>
                     <p>Your start up needs an office? These state of the art offices in downtown LA have just come to market and are the perfect setting to do business. Demand is high, first come, first served.</p>
-                    <p><a class="btn btn-lg btn-warning" href="#">Learn more</a></p>
+                    <p><a class="btn btn-lg btn-warning" href="moredetails.php?propertyid=15">Learn more</a></p>
                   </div>
                 </div>
               </div>
@@ -77,8 +77,8 @@
                   <div class="carousel-caption text-end bg-dark bg-opacity-50 p-4 rounded w-45 mx-auto">
                     <!-- i added a dark background here to make the text more readable. -->
                     <h1>Zoned Site ready for development</h1>
-                    <p>Looking for a top invesment opportunity? This new 10 acre Site on California Street LA fits the bill. With full planning permission and easy utility connections it is a prime investment in todays market.</p>
-                    <p><a class="btn btn-lg btn-warning" href="#">Register interest</a></p>
+                    <p>Looking for a top investment opportunity? This new 10 acre Site on California Street LA fits the bill. With full planning permission and easy utility connections it is a prime investment in todays market.</p>
+                    <p><a class="btn btn-lg btn-warning" href="moredetails.php?propertyid=16">Register interest</a></p>
                   </div>
                 </div>
               </div>

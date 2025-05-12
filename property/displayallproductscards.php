@@ -41,7 +41,7 @@ $price=$row["price"];
 $displayprice=number_format($price);
 echo "<div class='col-lg-3 col-md-4 mb-3'>";//creates a responsive BS column to house each card
 echo "<div class='card h-100 d-flex flex-column'>"; //create a card - each card is a child of the BS row
-echo "<img src='$image' class='card-img-top' style='height:190px; object-fit: cover;' alt='product'>";
+echo "<img src='$image' class='card-img-top' style='height:190px; object-fit: cover;' alt='property'>";
 echo "<div class='card-body flex-grow-1'>"; //this BS div adds a horizontal rule and holds the property  location , description and price
 echo "<hr>";
 echo "<p class='card-title fw-bold'>$town</p>";//output the property location
