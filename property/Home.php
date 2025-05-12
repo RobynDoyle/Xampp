@@ -194,7 +194,7 @@
 
         <!--footer adapted from https://getbootstrap.com/docs/5.3/examples/footers/-->
         
-        <?php include("includes/footer.html");?>
+        <?php include("includes/footer.php");?>
         
 
         </div>

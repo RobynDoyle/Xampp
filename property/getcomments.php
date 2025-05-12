@@ -77,13 +77,13 @@ mysqli_close($link);
 <label for="email" class="mb-2">Email: </label>
 <div><input type="email" name="author_email" id="email" class="form-control" required></div>
 <div class="mt-3">
-<button type="submit" class="btn btn-outline-primary mb-5 mt-3">Add Comment</button>
+<button type="submit" class="btn btn-outline-warning mb-5 mt-3">Add Comment</button>
 </div>
 </form> 
 
 </div>
 </section>
-<?php include("includes/footer.html");?>
+<?php include("includes/footer.php");?>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>

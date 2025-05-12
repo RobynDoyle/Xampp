@@ -26,7 +26,7 @@ $server="localhost";
 $dbuser="root";
 $password="";
 $link=mysqli_connect($server,$dbuser,$password);
-mysqli_select_db($link, "giftcompany");
+mysqli_select_db($link, "property");
 $title=mysqli_real_escape_string($link,$_POST["title"]); //escapes special characters in a string for use in an SQL query
 $content=mysqli_real_escape_string($link,$_POST["content"]);
 $author_name=mysqli_real_escape_string($link,$_POST["author_name"]);
@@ -36,7 +36,7 @@ $sql_insert="INSERT INTO comment (title, content, author_name, author_email)
 echo "<div class='container-lg feedback'>";
 if(mysqli_query($link, $sql_insert)) {
 echo "<h4>Testimonial Added!</h4>Thank you for your feedback. Our administrators moderate all comments and it will be attended to shortly<p>";
-echo "<a class='btn btn-outline-primary mt-3' href='getcomments.php'>Return to Testimonials page</a>";}
+echo "<a class='btn btn-outline-warning mt-3' href='getcomments.php'>Return to Testimonials page</a>";}
 else {
   echo "An error occurred, try again!";
 }
@@ -45,7 +45,7 @@ mysqli_close($link);
 ?>
 
 </section>
-<?php include("includes/footer.html");?>
+<?php include("includes/footer.php");?>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>

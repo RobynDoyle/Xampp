@@ -7,10 +7,9 @@
         <h5 class="text-warning">Residential</h5>
       <ul class="nav flex-column">
         <li class="nav-item mb-2"><a href="displayproductsbycat.php?categoryid=1" class="nav-link p-0 text-body-secondary">Top picks</a></li>
-        <li class="nav-item mb-2"><a href="displayproductsbycat.php?categoryid=1" class="nav-link p-0 text-body-secondary">Search</a></li>
-        <li class="nav-item mb-2"><a href="displayproductsbycat.php?categoryid=1" class="nav-link p-0 text-body-secondary">Listings</a></li>
-        <li class="nav-item mb-2"><a href="displayproductsbycat.php?categoryid=1" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-        <li class="nav-item mb-2"><a href="displayproductsbycat.php?categoryid=1" class="nav-link p-0 text-body-secondary">Support</a></li>
+        <li class="nav-item mb-2"><a href="moredetails.php?propertyid=7" class="nav-link p-0 text-body-secondary">Pick of the month</a></li>
+        <li class="nav-item mb-2"><a href="moredetails.php?propertyid=11" class="nav-link p-0 text-body-secondary">Pick of the week</a></li>
+        <li class="nav-item mb-2"><a href="moredetails.php?propertyid=10" class="nav-link p-0 text-body-secondary">Pick of the year</a></li>
         <li class="nav-item mb-2"><a href="adminlogin.php" class="nav-link p-0 text-white">Admin</a></li>
       </ul>
     </div>
@@ -19,10 +18,9 @@
         <h5 class="text-warning">Commercial</h5>
       <ul class="nav flex-column">
         <li class="nav-item mb-2"><a href="displayproductsbycat.php?categoryid=2" class="nav-link p-0 text-body-secondary">Top picks</a></li>
-        <li class="nav-item mb-2"><a href="displayproductsbycat.php?categoryid=2" class="nav-link p-0 text-body-secondary">Search</a></li>
-        <li class="nav-item mb-2"><a href="displayproductsbycat.php?categoryid=2" class="nav-link p-0 text-body-secondary">Offices</a></li>
-        <li class="nav-item mb-2"><a href="displayproductsbycat.php?categoryid=2" class="nav-link p-0 text-body-secondary">Investments</a></li>
-        <li class="nav-item mb-2"><a href="displayproductsbycat.php?categoryid=2" class="nav-link p-0 text-body-secondary">Start up hub</a></li>
+        <li class="nav-item mb-2"><a href="moredetails.php?propertyid=13" class="nav-link p-0 text-body-secondary">Pick of the month</a></li>
+        <li class="nav-item mb-2"><a href="moredetails.php?propertyid=12" class="nav-link p-0 text-body-secondary">Pick of the week</a></li>
+        <li class="nav-item mb-2"><a href="moredetails.php?propertyid=14" class="nav-link p-0 text-body-secondary">Pick of the year</a></li>
       </ul>
     </div>
 
@@ -30,10 +28,9 @@
         <h5 class="text-warning">Sites</h5>
       <ul class="nav flex-column">
         <li class="nav-item mb-2"><a href="displayproductsbycat.php?categoryid=3" class="nav-link p-0 text-body-secondary">Top Picks</a></li>
-        <li class="nav-item mb-2"><a href="displayproductsbycat.php?categoryid=3" class="nav-link p-0 text-body-secondary">Search</a></li>
-        <li class="nav-item mb-2"><a href="displayproductsbycat.php?categoryid=3" class="nav-link p-0 text-body-secondary">Regional</a></li>
-        <li class="nav-item mb-2"><a href="displayproductsbycat.php?categoryid=3" class="nav-link p-0 text-body-secondary">Greenfield</a></li>
-        <li class="nav-item mb-2"><a href="displayproductsbycat.php?categoryid=3" class="nav-link p-0 text-body-secondary">Brownfield</a></li>
+        <li class="nav-item mb-2"><a href="moredetails.php?propertyid=17" class="nav-link p-0 text-body-secondary">Pick of the week</a></li>
+        <li class="nav-item mb-2"><a href="moredetails.php?propertyid=16" class="nav-link p-0 text-body-secondary">Pick of the month</a></li>
+        <li class="nav-item mb-2"><a href="moredetails.php?propertyid=18" class="nav-link p-0 text-body-secondary">Pick of the year</a></li>
       </ul>
     </div>
 
