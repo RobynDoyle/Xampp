@@ -35,15 +35,19 @@
     </div>
 
     <div class="col-md-5 offset-md-1 mb-3">
-      <form>
-        <h5 class="text-warning">Subscribe to our newsletter</h5>
-        <p>Monthly catelogue of the newest properties. Get tips for your property search from our experts.</p>
-        <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-          <label for="newsletter1" class="visually-hidden">Email address</label>
-          <input id="newsletter1" type="email" class="form-control" placeholder="Email address">
-          <button class="btn btn-warning" type="button">Subscribe</button>
-        </div>
-      </form>
+    <form action="subscribers.php" method="post">
+    <h5 class="text-warning">Subscribe to our newsletter</h5>
+    <p>Monthly catalogue of the newest properties. Get tips for your property search from our experts.</p>
+    <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+      <label for="newsletterEmail" class="visually-hidden">Email address</label>
+      <input id="newsletterEmail" name="email" type="email" class="form-control" placeholder="Email address" required>
+
+      <label for="newsletterName" class="visually-hidden">Name</label>
+      <input id="newsletterName" name="name" type="text" class="form-control" placeholder="Your name" required>
+
+      <button class="btn btn-warning" type="submit" name="submit">Subscribe</button>
+    </div>
+  </form>
     </div>
   </div>
 

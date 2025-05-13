@@ -297,69 +297,7 @@
             </div>
             <div class="container-lg">
                 <div class="row justify-content-center">
-                <form style="width: 26rem;">
-                <!-- Name input -->
-                <div data-mdb-input-init class="form-outline mb-4">
-                    <label class="form-label" for="form4Example1">Name:</label>
-                    
-                        <i class="bi bi-person-fill"></i>
-                   
-                    <input type="text" id="form4Example1" class="form-control" placeholder="Enter your name" />
-                
-                </div>
-                
-                <!-- Email input -->
-                <div data-mdb-input-init class="form-outline mb-4">
-                    <label class="form-label" for="form4Example2">Email address:</label>
-                   
-                        <i class="bi bi-envelope-fill"></i>
-                 
-                    <input type="email" id="form4Example2" class="form-control" placeholder="Enter your email address" />
-                </div>
-<!-- from class slides pg 39 and 45 -->
-                <div class="mb-3">
-                    <label for="exampleSelect" class="form-label">Choose a service</label>
-                    <i class="bi bi-house-fill"></i>
-                    <select class="form-select" id="exampleSelect">
-                    <option value="Buy">Buying a property</option>
-                    <option value="Sell">Selling a property</option>
-                    <option value="First">First time buyers calculator</option>
-                    <option value="Holiday">Holiday Homes Buyers support</option>
-                    <option value="Invest">Investment opportunites</option>
-                    <option value="Hub">Start-Up Property Hub</option>
-                    <option value="Other">Other</option>
-                    </select>
-                   </div>
-                
-                <!-- Message input -->
-                <div data-mdb-input-init class="form-outline mb-4">
-                    <label class="form-label" for="form4Example3">Message</label>
-                    
-                        <i class="bi bi-chat-left-dots-fill"></i>
-                    
-                    <textarea class="form-control" id="form4Example3" rows="4" placeholder="Enter your message"></textarea>
-                    
-                </div>
-                
-                <!-- Checkbox -->
-                <div class="form-check d-flex justify-content-center mb-4">
-                    <input
-                    class="form-check-input me-2"
-                    type="checkbox"
-                    value=""
-                    id="form4Example4"
-                    checked
-                    />
-                    <label class="form-check-label" for="form4Example4">
-                    Send me a copy of this message
-                    </label>
-                </div>
-                
-                <!-- Submit button -->
-                <div class="text-center">  
-                <button data-mdb-ripple-init type="button" class="btn btn-warning btn-block mb-4 w-100">Send</button>
-                </div>
-                </form>
+                <?php include("includes/form.php");?>
             </div>
             </div>
         </section>
