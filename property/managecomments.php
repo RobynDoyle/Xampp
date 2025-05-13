@@ -53,12 +53,12 @@ echo "<tr>
     <td>$created</td>
 <td>$status</td>";
     if ($status=='planned')
-    {echo "<td><a class='btn btn-outline-primary disabled' href='updatecomment.php?id=$id' onclick=\"return confirm('Are you sure you want to approve this comment?');\">      
+    {echo "<td><a class='btn btn-outline-warning disabled' href='updatecomment.php?id=$id' onclick=\"return confirm('Are you sure you want to approve this comment?');\">      
        Approve</a></td>";} else
-    {echo "<td><a class='btn btn-outline-primary' href='updatecomment.php?id=$id' onclick=\"return confirm('Are you sure you want to approve this comment?');\">    
+    {echo "<td><a class='btn btn-outline-warning' href='updatecomment.php?id=$id' onclick=\"return confirm('Are you sure you want to approve this comment?');\">    
        Approve</a></td>";
     }
-    echo "<td><a class='btn btn-outline-primary'href='deletecomment.php?id=$id' onclick=\"return confirm('Are you sure you want to delete this comment?');\"> 
+    echo "<td><a class='btn btn-outline-warning'href='deletecomment.php?id=$id' onclick=\"return confirm('Are you sure you want to delete this comment?');\"> 
       Delete</a></td>
       </tr>";
 }

@@ -75,7 +75,7 @@ mysqli_close($link);
 <label for="image">Image Path: </label>
 <div><input class="mt-2 mb-2 form-control" type="text" id="image" name="image" placeholder="Enter image path" required /></div>
 
-<div><input type="submit" class="btn btn-outline-primary mt-5 mb-5" name="submit" value="Add Product"/></div>
+<div><input type="submit" class="btn btn-outline-warning mt-5 mb-5" name="submit" value="Add Product"/></div>
 
 </form>
 </div> <!--close the container-lg div -->

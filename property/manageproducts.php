@@ -22,7 +22,7 @@
 
 <section class="p-3 mt-3">
 <h3>Manage Products</h3>
-<a href="addproduct.php" class="btn btn-outline-primary mt-3 mb-3
+<a href="addproduct.php" class="btn btn-outline-warning mt-3 mb-3
 ">Add a new product</a>
 <br>
 <br>
@@ -54,8 +54,8 @@ if (mysqli_num_rows($result)>0)
             <td>$product</td>
             <td>&euro; $price</td>
             <td>$productdesc</td>
-            <td><a href='editproduct.php?productid=$productid' class='btn btn-outline-primary'>Update</a></td>
-            <td><a href='confirmdeleteproduct.php?productid=$productid' class='btn btn-outline-primary'>Delete</a></td>
+            <td><a href='editproduct.php?productid=$productid' class='btn btn-outline-warning'>Update</a></td>
+            <td><a href='confirmdeleteproduct.php?productid=$productid' class='btn btn-outline-warning'>Delete</a></td>
             </tr>";
     }
     echo "</table>";

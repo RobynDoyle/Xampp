@@ -18,7 +18,7 @@ if(isset($_POST['submit']))
   //if the query is successful return to the manageproducts page, otherwise output an error message
   if (mysqli_query( $link, $sql))
   {
-    header("Location: http://localhost/giftcompanyBS/manageproducts.php");
+    header("Location: http://localhost/property/manageproducts.php");
     exit;
   }
   else 

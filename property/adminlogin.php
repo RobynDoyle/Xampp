@@ -42,7 +42,7 @@ unset($_SESSION['errors']); //clear errors after displaying them
 <div><input type="email" class="mt-2 mb-2 form-control" name="admin_email" placeholder="Enter username" required></div>
 <label for="password">Password: </label>
 <div><input type="password" class="mt-2 mb-2 form-control" name="password" placeholder="Enter password" required></div>
-<input type="submit" value="Login" class="btn btn-outline-primary mt-3">
+<input type="submit" value="Login" class="btn btn-outline-warning mt-3">
 </form>
 </div>
 
