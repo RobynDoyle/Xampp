@@ -9,7 +9,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Link to your custom css -->
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="css/styles.css">
 
         <!-- set the viewport element to give the browser instructions on how to control the page's dimensions and scaling-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -78,7 +78,7 @@
                     <!-- i added a dark background here to make the text more readable. -->
                     <h1>Zoned Site ready for development</h1>
                     <p>Looking for a top investment opportunity? This new 10 acre Site on California Street LA fits the bill. With full planning permission and easy utility connections it is a prime investment in todays market.</p>
-                    <p><a class="btn btn-lg btn-warning" href="moredetails.php?propertyid=16">Register interest</a></p>
+                    <p><a class="btn btn-lg btn-warning" href="moredetails.php?propertyid=16">View online</a></p>
                   </div>
                 </div>
               </div>

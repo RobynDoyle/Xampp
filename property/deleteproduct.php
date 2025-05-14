@@ -1,7 +1,7 @@
 <?php
 require 'connect.php';
-$productid= $_GET["productid"];
-$sql= "DELETE FROM product WHERE productid=$productid";
+$propertyid= $_GET["propertyid"];
+$sql= "DELETE FROM property WHERE propertyid=$propertyid";
 if (mysqli_query( $link, $sql))
 {
 header("Location: http://localhost/property/manageproducts.php");
@@ -9,7 +9,8 @@ header("Location: http://localhost/property/manageproducts.php");
 }
 else
 {
-  echo "Could not delete product";
+  echo "Could not delete property";
+  echo "<pre>".mysqli_error($link)."</pre>";
 }
 mysqli_close($link);
 ?>

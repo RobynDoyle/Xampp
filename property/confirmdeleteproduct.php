@@ -3,7 +3,7 @@
 <head>
   <title>Confirm Delete</title>
   <meta charset="utf-8">
- <link rel="stylesheet" href="css/stylesbs.css">
+  <link rel="stylesheet" href="css/styles.css">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -24,34 +24,46 @@
 <div class="container-lg feedback">
 <?php
 require 'connect.php';
-$productid=$_GET['productid'];
-$sql="SELECT * from product where productid=$productid";
+$propertyid=$_GET['propertyid'];
+$sql="SELECT * from property where propertyid=$propertyid";
 $result=mysqli_query($link, $sql);
-    echo "<h3>Confirm Delete Product</h3>";
+    echo "<h3>Confirm Delete property</h3>";
     echo "<p>";
 echo "<table class='table'>";
 echo "<tr>
     <td><strong>Image</td>
-    <td><strong>Product</td>
+    <td><strong>Address</td>
+    <td><strong>Town / City</td>
+    <td><strong>County / State</td>
+    <td><strong>Bedrooms</td>
     <td><strong>Price</td>
-<td><strong>Description</td>
+<td><strong>Short Description</td>
+<td><strong>Long Description</td>
     </tr>";
 
 $row=mysqli_fetch_array($result);
     $image=$row["image"];
-    $product=$row["productname"];
-    $productdesc=$row["description"];
+    $address1=$row["address1"];
+    $town=$row["town"];
+    $county=$row["county"];
+    $bedrooms=$row["bedrooms"];
+    $shortdescription=$row["shortdescription"];
+    $longdescription=$row["longdescription"];
     $price=$row["price"];
     echo "<tr>
-<td><img src='$image' width=100 height=100> </td>
-        <td>$product</td>
+<td><img src='$image' width=150 height=150> </td>
+        <td>$address1</td>
+        <td>$town</td>
+        <td>$county</td>
+        <td>$bedrooms</td>
         <td>&euro; $price</td>
-        <td>$productdesc</td>
+        <td>$shortdescription</td>
+        <td>$longdescription</td>
         </tr>";
 echo "</table>";
-echo "<p> Are you sure you want to delete this product? <p>
-    <a href='deleteproduct.php?productid=$productid' class='btn btn-outline-primary'>Delete</a>
-    <a href='manageproducts.php' class='btn btn-outline-primary'>Cancel</a>";
+echo "<p> Are you sure you want to delete this property? <p>
+    <a href='deleteproduct.php?propertyid=$propertyid' class='btn btn-outline-warning'>Delete</a>
+    <a href='manageproducts.php' class='btn btn-outline-warning'>Cancel</a>";
 
 mysqli_close($link);
 ?>

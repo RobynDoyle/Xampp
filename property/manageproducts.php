@@ -1,9 +1,9 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-  <title>page title</title>
+  <title>Manage Properties</title>
   <meta charset="utf-8">
- <link rel="stylesheet" href="css/stylesbs.css">
+  <link rel="stylesheet" href="css/styles.css">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -41,7 +41,8 @@ if (mysqli_num_rows($result)>0)
         <td><strong>Town</td>
         <td><strong>County</td>
         <td><strong>Price</td>
-        <td><strong>Description</td>
+        <td><strong>Short Description</td>
+        <td><strong>Long Description</td>
         <td><strong>Update</td>
         <td><strong>Delete</td>
         </tr>";
@@ -51,16 +52,19 @@ if (mysqli_num_rows($result)>0)
         $address1=$row["address1"];
         $town=$row["town"];
         $county=$row["county"];
-        $product=$row["productname"];
-        $productdesc=$row["description"];
+        $shortdesc=$row["shortdescription"];
+        $longdesc=$row["longdescription"];
         $price=$row["price"];
         echo "<tr>
-            <td><img src='$image' width=100 height=100> </td>
-            <td>$product</td>
+            <td><img src='$image' width=150 height=150> </td>
+            <td>$address1</td>
+            <td>$town</td>
+            <td>$county</td>
             <td>&euro; $price</td>
-            <td>$productdesc</td>
-            <td><a href='editproduct.php?productid=$propertyid' class='btn btn-outline-warning'>Update</a></td>
-            <td><a href='confirmdeleteproduct.php?productid=$productid' class='btn btn-outline-warning'>Delete</a></td>
+            <td>$shortdesc</td>
+            <td>$longdesc</td>
+            <td><a href='editproduct.php?propertyid=$propertyid' class='btn btn-outline-warning'>Update</a></td>
+            <td><a href='confirmdeleteproduct.php?propertyid=$propertyid' class='btn btn-outline-warning'>Delete</a></td>
             </tr>";
     }
     echo "</table>";

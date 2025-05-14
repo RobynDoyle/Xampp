@@ -8,7 +8,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Link to your custom css -->
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="css/styles.css">
 
         <!-- set the viewport element to give the browser instructions on how to control the page's dimensions and scaling-->
         <meta name="viewport" content="width=device-width, initial-scale=1">

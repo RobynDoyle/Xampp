@@ -3,7 +3,7 @@
 <head>
   <title>Edit Product</title>
   <meta charset="utf-8">
- <link rel="stylesheet" href="css/stylesbs.css">
+  <link rel="stylesheet" href="css/styles.css">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -24,15 +24,18 @@
 <div class="container-lg">
 <?php
 require 'connect.php';
-$productid=$_GET["productid"];         //retrieve the productid passed in the url
-$sql="SELECT * FROM product, category WHERE productid=$productid AND category.categoryid=product.categoryid";
+$propertyid=$_GET["propertyid"];         //retrieve the propertyid passed in the url
+$sql="SELECT * FROM property, category WHERE propertyid=$propertyid AND category.categoryid=property.categoryid";
 $result=mysqli_query($link, $sql);      //run the query
 $row=mysqli_fetch_array($result);     //store the recordset in $row
 //retrieve the database fields from the recordset and assign to variables for output
-$productid=$row["productid"];
-$productname=htmlspecialchars($row["productname"]);
+$propertyid=$row["propertyid"];
+$town=htmlspecialchars($row["town"]);
+$address1=htmlspecialchars($row["address1"]);
+$county=htmlspecialchars($row["county"]);
 $price=htmlspecialchars($row["price"]);
-$desc=htmlspecialchars($row["description"]);
+$bedrooms=htmlspecialchars($row["bedrooms"]);
+$shortdesc=htmlspecialchars($row["shortdescription"]);
 $longdesc=htmlspecialchars($row["longdescription"]);
 $vendor_email=htmlspecialchars($row["vendor_email"]);
 $categoryid=$row["categoryid"];
@@ -40,15 +43,21 @@ $categoryname=htmlspecialchars($row["categoryname"]);
 $image=htmlspecialchars($row["image"]);
 ?>
  <!--show image of product and then write out the existing fields into the form fields-->
- <?php echo "<img src='$image' width=100 height=100>" ?>
+ <?php echo "<img src='$image' width=200 height=200>" ?>
  <form method="post" action="processedit.php">
- <input type="hidden" name="productid" value="<?php echo $productid; ?>"/> <!--productid is not displayed but needed to update the correct record in the processedit page-->
-<label for="productname">Product Name:</label>
-<div><input type="text" name="productname" id="productname" class="form-control mt-2 mb-2" value="<?php echo $productname; ?>" required/></div>
+ <input type="hidden" name="propertyid" value="<?php echo $propertyid; ?>"/> <!--propertyid is not displayed but needed to update the correct record in the processedit page-->
+<label for="address1">Street</label>
+<div><input type="text" name="address1" id="address1" class="form-control mt-2 mb-2" value="<?php echo $address1; ?>" required/></div>
+<label for="town">Town / City</label>
+<div><input type="text" name="town" id="town" class="form-control mt-2 mb-2" value="<?php echo $town; ?>" required/></div>
+<label for="address1">County / State</label>
+<div><input type="text" name="county" id="county" class="form-control mt-2 mb-2" value="<?php echo $county; ?>" required/></div>
+<label for="price">Bedrooms:</label>
+<div><input type="text" name="bedrooms" id="bedrooms" class="form-control mt-2 mb-2" value="<?php echo $bedrooms; ?>" required/></div>
 <label for="price">Price:</label>
 <div><input type="number" name="price" id="price" step="0.01" min="0" class="form-control mt-2 mb-2" value= "<?php echo $price; ?>" required /></div>
 <label for="description">Description:</label>
-<div><textarea name="description"  id="description" class="form-control mt-2 mb-2" rows="8" cols="35" required><?php echo $desc; ?> </textarea>
+<div><textarea name="shortdescription"  id="shortdescription" class="form-control mt-2 mb-2" rows="8" cols="35" required><?php echo $shortdesc; ?> </textarea>
 </div>
 <label for="longdescription">Long Description:</label>
 <div><textarea name="longdescription" id="longdescription" class="form-control mt-2 mb-2" rows="8" cols="35" required><?php echo $longdesc; ?></textarea></div>
@@ -92,7 +101,7 @@ mysqli_close($link);
 <label for="image">Image Path: </label>
 <div><input type="text" id="image" name="image" class="form-control mt-2 mb-2" value="<?php echo $image; ?>" required /></div>
 
-<div><input type="submit" class="btn btn-outline-primary mt-5" name="submit" value="Edit Product"/></div>
+<div><input type="submit" class="btn btn-outline-warning mt-5" name="submit" value="Edit Product"/></div>
 
 </form>
 </div>
