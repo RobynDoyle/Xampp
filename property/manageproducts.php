@@ -29,7 +29,7 @@
 <?php
 require 'connect.php';
 
-$sql="SELECT * from product";
+$sql="SELECT * from property";
 $result=mysqli_query($link, $sql);
 if (mysqli_num_rows($result)>0)
 {
@@ -37,15 +37,20 @@ if (mysqli_num_rows($result)>0)
     echo "<table class='table'>"; /*need to add the table class to use BS table styles */
     echo "<tr>
         <td><strong>Image</td>
-        <td><strong>Product</td>
+        <td><strong>Street Adress</td>
+        <td><strong>Town</td>
+        <td><strong>County</td>
         <td><strong>Price</td>
         <td><strong>Description</td>
         <td><strong>Update</td>
         <td><strong>Delete</td>
         </tr>";
     while($row=mysqli_fetch_array($result)) {
-        $productid=$row["productid"];
+        $propertyid=$row["propertyid"];
         $image=$row["image"];
+        $address1=$row["address1"];
+        $town=$row["town"];
+        $county=$row["county"];
         $product=$row["productname"];
         $productdesc=$row["description"];
         $price=$row["price"];
@@ -54,7 +59,7 @@ if (mysqli_num_rows($result)>0)
             <td>$product</td>
             <td>&euro; $price</td>
             <td>$productdesc</td>
-            <td><a href='editproduct.php?productid=$productid' class='btn btn-outline-warning'>Update</a></td>
+            <td><a href='editproduct.php?productid=$propertyid' class='btn btn-outline-warning'>Update</a></td>
             <td><a href='confirmdeleteproduct.php?productid=$productid' class='btn btn-outline-warning'>Delete</a></td>
             </tr>";
     }

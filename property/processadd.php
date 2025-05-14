@@ -25,21 +25,29 @@
 <?php
 require 'connect.php';
 if(isset($_POST['submit'])) {
-$product=mysqli_real_escape_string($link,$_POST['productname']);
+$street=mysqli_real_escape_string($link,$_POST['street']);
+$town=mysqli_real_escape_string($link,$_POST['town']);
+$county=mysqli_real_escape_string($link,$_POST['county']);
 $price=mysqli_real_escape_string($link,$_POST['price']);
-$description=mysqli_real_escape_string($link,$_POST['description']);
+$shortdescription=mysqli_real_escape_string($link,$_POST['description']);
 $longdesc=mysqli_real_escape_string($link,$_POST['longdescription']);
 $vendor_email=$_POST['vendor_email'];
 $categoryid=$_POST['category'];
 $image=mysqli_real_escape_string($link,$_POST['image']);
-$sql_insert="INSERT INTO product(productname, price, description, longdescription, vendor_email, categoryid, image) VALUES ('$product', '$price', '$description', '$longdesc', '$vendor_email', '$categoryid', '$image')";
+$sql_insert="INSERT INTO property(address1, town, county, price, shortdescription, longdescription, vendor_email, categoryid, image) VALUES ('$steet', '$town', '$county', '$price', '$shortdescription', '$longdesc', '$vendor_email', '$categoryid', '$image')";
 if(mysqli_query($link, $sql_insert)) {
-    echo "Your product has been successfully added <p>";
-    echo "<a class='btn btn-outline-primary mt-5' href='manageproducts.php'>Return to Manage Products page</a>";
+    echo "Your property has been successfully added <p>";
+    echo "<a class='btn btn-outline-warning mt-5' href='manageproducts.php'>Return to Manage Products page</a>";
     
     }
     else {
       echo "An error occurred, try again!";
+      echo "<pre>".mysqli_error($link)."</pre>";
+    }
+
+    if (empty($_POST['vendor_email'])) {
+      echo "Error: Vendor email must be selected.";
+      exit;
     }
     
     }

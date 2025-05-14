@@ -22,10 +22,14 @@
 
 <section class="p-3 mt-3">
 <div class="container-lg">
-<h3>Add a Product</h3>
+<h3>Add a Property</h3>
 <form method="post" action="processadd.php">
-<label for="productname">Product Name:</label>
-<div><input class="mt-2 mb-2 form-control" type="text" name="productname" id="productname" placeholder="Enter product name" required/></div>
+<label for="town">Property Street Location</label>
+<div><input class="mt-2 mb-2 form-control" type="text" name="street" id="street" placeholder="Adress Line 1" required/></div>
+<label for="town">Town:</label>
+<div><input class="mt-2 mb-2 form-control" type="text" name="town" id="town" placeholder="Town or city." required/></div>
+<label for="town">County / State</label>
+<div><input class="mt-2 mb-2 form-control" type="text" name="county" id="county" placeholder="California" required/></div>
 <label for="price">Price</label>
 <div><input class="mt-2 mb-2 form-control" type="number" name="price" id="price" step="0.01" min="0" placeholder="0.00" required /></div>
 <label for="description">Description</label>
@@ -36,7 +40,6 @@
 <label for="vendoremail">Vendor Email:</label>
 <!--create a select box with dropdown email options taken from the database as this is more user friendly-->
 <div><select class="mt-2 mb-2" name="vendor_email" id="vendoremail" required>
-<option>Select Vendor</option>
 <?php
  require 'connect.php';
 $sql="SELECT vendor_email FROM vendor";  //choose all the  possible options from the database table
