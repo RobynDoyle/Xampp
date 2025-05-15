@@ -22,6 +22,10 @@
 
 <section class="p-3 mt-3">
 <div class="container-lg">
+<a href='admin.php' class='btn btn-outline-warning'>Admin Home Area</a>
+<a href='manageproducts.php' class='btn btn-outline-warning'>All Properties</a>
+<a href='logout.php' class='btn btn-outline-warning'>Logout</a>
+<hr>
 <?php
 require 'connect.php';
 $propertyid=$_GET["propertyid"];         //retrieve the propertyid passed in the url
@@ -53,7 +57,7 @@ $image=htmlspecialchars($row["image"]);
 <label for="address1">County / State</label>
 <div><input type="text" name="county" id="county" class="form-control mt-2 mb-2" value="<?php echo $county; ?>" required/></div>
 <label for="price">Bedrooms:</label>
-<div><input type="text" name="bedrooms" id="bedrooms" class="form-control mt-2 mb-2" value="<?php echo $bedrooms; ?>" required/></div>
+<div><input type="number" name="bedrooms" id="bedrooms" class="form-control mt-2 mb-2" value="<?php echo $bedrooms; ?>" required/></div>
 <label for="price">Price:</label>
 <div><input type="number" name="price" id="price" step="0.01" min="0" class="form-control mt-2 mb-2" value= "<?php echo $price; ?>" required /></div>
 <label for="description">Description:</label>

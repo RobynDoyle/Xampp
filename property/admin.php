@@ -29,10 +29,10 @@ if (isset($_SESSION['username'])){
 $username = $_SESSION['username'];
 echo "<h3> Administrator Area</h3>";
 echo "Hi " . $username . "!<p>";
-echo "Choose one of the menu options to Manage Comments, Products or Vendors.  &nbsp; &nbsp;";
+echo "Choose one of the menu options to Manage Comments, Properties or Vendors.  &nbsp; &nbsp;";
 echo "<a href='logout.php' class='btn btn-outline-warning'>Logout</a>";
 echo "<p><a href='managecomments.php' class='btn btn-outline-warning'>Manage Comments</a></p>";
-echo "<p><a href='manageproducts.php' class='btn btn-outline-warning'>Manage Products</a></p>";
+echo "<p><a href='manageproducts.php' class='btn btn-outline-warning'>Manage Properties</a></p>";
 echo "<p><a href='managevendors.php' class='btn btn-outline-warning'>Manage Vendors</a></p>";
 } else {
   echo "<p>You are not logged in. Please <a href='adminlogin.php'>login</a> first.</p>";

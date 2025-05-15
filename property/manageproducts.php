@@ -18,12 +18,17 @@
 </head>
 <body>
 <div class="container-fluid p-0">
+
+
 <?php include("includes/nav.php");?>
 
 <section class="p-3 mt-3">
-<h3>Manage Products</h3>
-<a href="addproduct.php" class="btn btn-outline-warning mt-3 mb-3
-">Add a new product</a>
+
+<a href='admin.php' class='btn btn-outline-warning'>Admin Home Area</a>
+<a href='logout.php' class='btn btn-outline-warning'>Logout</a>
+<hr>
+<h3>Manage Properties</h3>
+<a href="addproduct.php" class="btn btn-outline-warning mt-3 mb-3">Add a new property</a>
 <br>
 <br>
 <?php
@@ -41,6 +46,7 @@ if (mysqli_num_rows($result)>0)
         <td><strong>Town</td>
         <td><strong>County</td>
         <td><strong>Price</td>
+        <td><strong>Bedrooms</td>
         <td><strong>Short Description</td>
         <td><strong>Long Description</td>
         <td><strong>Update</td>
@@ -52,6 +58,7 @@ if (mysqli_num_rows($result)>0)
         $address1=$row["address1"];
         $town=$row["town"];
         $county=$row["county"];
+        $bedrooms=$row["bedrooms"];
         $shortdesc=$row["shortdescription"];
         $longdesc=$row["longdescription"];
         $price=$row["price"];
@@ -61,6 +68,7 @@ if (mysqli_num_rows($result)>0)
             <td>$town</td>
             <td>$county</td>
             <td>&euro; $price</td>
+            <td>$bedrooms</td>
             <td>$shortdesc</td>
             <td>$longdesc</td>
             <td><a href='editproduct.php?propertyid=$propertyid' class='btn btn-outline-warning'>Update</a></td>

@@ -22,6 +22,9 @@
 <?php include("includes/nav.php");?>
 
 <section class="p-3 mt-3">
+<a href='admin.php' class='btn btn-outline-warning'>Admin Home Area</a>
+<a href='logout.php' class='btn btn-outline-warning'>Logout</a>
+<hr>
 <?php
 require "connect.php"; //access the connection code
 $sql="SELECT * from comment";

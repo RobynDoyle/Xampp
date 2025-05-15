@@ -21,7 +21,12 @@
 <?php include("includes/nav.php");?>
 
 <section class="p-3 mt-3">
+
 <div class="container-lg">
+<a href='admin.php' class='btn btn-outline-warning'>Admin Home Area</a>
+<a href='manageproducts.php' class='btn btn-outline-warning'>All Properties</a>
+<a href='logout.php' class='btn btn-outline-warning'>Logout</a>
+<hr>
 <h3>Add a Property</h3>
 <form method="post" action="processadd.php">
 <label for="town">Property Street Location</label>
@@ -30,6 +35,8 @@
 <div><input class="mt-2 mb-2 form-control" type="text" name="town" id="town" placeholder="Town or city." required/></div>
 <label for="town">County / State</label>
 <div><input class="mt-2 mb-2 form-control" type="text" name="county" id="county" placeholder="California" required/></div>
+<label for="bedrooms">Bedrooms</label>
+<div><input class="mt-2 mb-2 form-control" type="number" name="bedrooms" id="bedrooms" placeholder="Number of bedrooms" required/></div>
 <label for="price">Price</label>
 <div><input class="mt-2 mb-2 form-control" type="number" name="price" id="price" step="0.01" min="0" placeholder="0.00" required /></div>
 <label for="description">Description</label>

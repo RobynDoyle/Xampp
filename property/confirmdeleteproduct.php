@@ -21,13 +21,18 @@
 <?php include("includes/nav.php");?>
 
 <section class="p-3 mt-3">
+
 <div class="container-lg feedback">
+<a href='admin.php' class='btn btn-outline-warning'>Admin Home Area</a>
+<a href='manageproducts.php' class='btn btn-outline-warning'>All Properties</a>
+<a href='logout.php' class='btn btn-outline-warning'>Logout</a>
+<hr> 
 <?php
 require 'connect.php';
 $propertyid=$_GET['propertyid'];
 $sql="SELECT * from property where propertyid=$propertyid";
 $result=mysqli_query($link, $sql);
-    echo "<h3>Confirm Delete property</h3>";
+    echo "<h3>Confirm Delete Property</h3>";
     echo "<p>";
 echo "<table class='table'>";
 echo "<tr>

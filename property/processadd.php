@@ -29,12 +29,13 @@ $street=mysqli_real_escape_string($link,$_POST['street']);
 $town=mysqli_real_escape_string($link,$_POST['town']);
 $county=mysqli_real_escape_string($link,$_POST['county']);
 $price=mysqli_real_escape_string($link,$_POST['price']);
+$bedrooms=mysqli_real_escape_string($link,$_POST['bedrooms']);
 $shortdescription=mysqli_real_escape_string($link,$_POST['description']);
 $longdesc=mysqli_real_escape_string($link,$_POST['longdescription']);
 $vendor_email=$_POST['vendor_email'];
 $categoryid=$_POST['category'];
 $image=mysqli_real_escape_string($link,$_POST['image']);
-$sql_insert="INSERT INTO property(address1, town, county, price, shortdescription, longdescription, vendor_email, categoryid, image) VALUES ('$steet', '$town', '$county', '$price', '$shortdescription', '$longdesc', '$vendor_email', '$categoryid', '$image')";
+$sql_insert="INSERT INTO property(address1, town, county, price, bedrooms, shortdescription, longdescription, vendor_email, categoryid, image) VALUES ('$steet', '$town', '$county', '$price', '$bedrooms', '$shortdescription', '$longdesc', '$vendor_email', '$categoryid', '$image')";
 if(mysqli_query($link, $sql_insert)) {
     echo "Your property has been successfully added <p>";
     echo "<a class='btn btn-outline-warning mt-5' href='manageproducts.php'>Return to Manage Products page</a>";
