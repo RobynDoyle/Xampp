@@ -47,7 +47,7 @@ echo "<div class='col-md-6'>";
 echo "<div class='card-body'>";
 echo "<h4 class='card-title mb-3'>" . htmlspecialchars($address) . ", " . htmlspecialchars($town) . "</h4>";
 echo "<h5 class='text-muted mb-3'>&dollar;" . number_format($price, 2) . "</h5>";
-echo "<p><strong>Short Description:</strong><br>" . htmlspecialchars($description) . "</p>";
+echo "<p><strong>Description:</strong><br>" . htmlspecialchars($description) . "</p>";
 if ($bedrooms > 0) {
     echo "<p><strong>Bedrooms:</strong> " . htmlspecialchars($bedrooms) . "</p>";
 }

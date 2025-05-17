@@ -9,6 +9,8 @@
 
  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
+<meta name="description" content="ROYLE Properties offers properties for sale in the greater LA Area in California.">
+<meta name="keywords" content="All properties, browse, ROYLE Properties, Los Angeles, House, Residential, Commercial, Sites.">
 
 <!-- set the viewport element to give the browser instructions on how to control the page's dimensions and scaling-->
 <meta name="viewport" content="width=device-width, initial-scale=1">

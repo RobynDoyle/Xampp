@@ -52,7 +52,7 @@ $vendor_phone=$row["vendor_phone"];
  <label for="address1">Phone</label>
 <div><input type="text" name="vendor_phone" id="vendor_phone" class="form-control mt-2 mb-2" value="<?php echo $vendor_phone; ?>" required/></div>
 
-<div><input type="submit" class="btn btn-outline-warning mt-5" name="submit" value="Edit Product"/></div>
+<div><input type="submit" class="btn btn-outline-warning mt-5" name="submit" value="Edit Vendor"/></div>
 
 </form>
 </div>

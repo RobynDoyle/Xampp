@@ -10,6 +10,8 @@
 
         <!-- Link to your custom css -->
         <link rel="stylesheet" href="css/styles.css">
+        <meta name="description" content="ROYLE Properties offers properties for sale in the greater LA Area in California.">
+        <meta name="keywords" content="Home Page, ROYLE Properties, Los Angeles, House, Residential, Commercial, Sites.">
 
         <!-- set the viewport element to give the browser instructions on how to control the page's dimensions and scaling-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,7 +21,6 @@
 
         <!-- Font Awesome Icons CDN -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     </head>
     <body>
 

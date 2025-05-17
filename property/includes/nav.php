@@ -5,7 +5,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
 
 <nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Fourth navbar example">
   <div class="container-fluid">
-    <i class="bi bi-house fs-1 text-warning me-2"></i>
+    <a class="bi bi-house fs-1 text-warning me-2" href="Home.php"></a>
     <a class="navbar-brand text-warning" href="Home.php">ROYLE Properties</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -36,11 +36,10 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <li class="nav-item">
           <a class="nav-link <?php if($current_page == 'Contact.php') echo 'active'; ?>" href="Contact.php">Contact</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link <?php if($current_page == 'search.php') echo 'active'; ?>" href="search.php">Search</a>
+        </li>
       </ul>
-
-      <form class="d-none d-lg-flex me-3">
-        <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-      </form>
 
       <div class="d-flex flex-column flex-md-row gap-2 ms-ms-3">
         <button type="button" class="btn btn-outline-light">Login</button>

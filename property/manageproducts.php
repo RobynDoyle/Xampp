@@ -49,6 +49,7 @@ if (mysqli_num_rows($result)>0)
         <td><strong>Bedrooms</td>
         <td><strong>Short Description</td>
         <td><strong>Long Description</td>
+        <td><strong>Vendor Email</td>
         <td><strong>Update</td>
         <td><strong>Delete</td>
         </tr>";
@@ -62,6 +63,7 @@ if (mysqli_num_rows($result)>0)
         $shortdesc=$row["shortdescription"];
         $longdesc=$row["longdescription"];
         $price=$row["price"];
+        $vendor_email=$row["vendor_email"];
         echo "<tr>
             <td><img src='$image' width=150 height=150> </td>
             <td>$address1</td>
@@ -71,6 +73,7 @@ if (mysqli_num_rows($result)>0)
             <td>$bedrooms</td>
             <td>$shortdesc</td>
             <td>$longdesc</td>
+            <td>$vendor_email</td>
             <td><a href='editproduct.php?propertyid=$propertyid' class='btn btn-outline-warning'>Update</a></td>
             <td><a href='confirmdeleteproduct.php?propertyid=$propertyid' class='btn btn-outline-warning'>Delete</a></td>
             </tr>";
