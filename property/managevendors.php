@@ -59,7 +59,7 @@ if (mysqli_num_rows($result)>0)
             <td>$vendor_surname</td>
             <td>$vendor_phone</td>
             <td><a href='editvendor.php?vendor_email=$vendor_email' class='btn btn-outline-warning'>Update</a></td>
-            <td><a href='confirmdeleteproduct.php?propertyid=$propertyid' class='btn btn-outline-warning'>Delete</a></td>
+            <td><a href='confirmdeletevendor.php?vendor_email=$vendor_email' class='btn btn-outline-warning'>Delete</a></td>
             </tr>";
     }
     echo "</table>";
