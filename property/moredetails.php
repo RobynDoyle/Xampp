@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-  <title>Property</title>
+  <title>Property Details</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/styles.css">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -55,11 +55,11 @@ echo "<p><strong>Full Details:</strong><br>" . nl2br(htmlspecialchars($longdescr
 
 echo "<p><a class='btn btn-lg btn-warning' href='displayallproductscards.php'>Listings</a></p>";
 
-echo "</div>"; // close card-body
-echo "</div>"; // close col-md-6
-echo "</div>"; // close row
-echo "</div>"; // close card
-echo "</div>"; // close container
+echo "</div>"; 
+echo "</div>"; 
+echo "</div>"; 
+echo "</div>"; 
+echo "</div>"; 
 
 mysqli_close($link);
 

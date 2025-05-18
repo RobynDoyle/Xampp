@@ -31,7 +31,7 @@ $result=mysqli_query($link, $sql);
 if(mysqli_num_rows($result)>0) //check there are records in the result set
 {
 echo "<div class='container-lg'>";//set up the BS container
-echo "<h4>All Products</h4>";
+echo "<h4>All Properties</h4>";
 echo "<div class='row justify-content-left my-5'>";//set up a BS row for the cards
 
 while($row=mysqli_fetch_array($result)) //while there are records in the array

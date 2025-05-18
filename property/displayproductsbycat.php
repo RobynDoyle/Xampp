@@ -60,7 +60,7 @@ echo "</div>"; //close the BS row since no more records
 else //if there are no records in the result set
 {
 echo "<div class='feedback'>";
-echo "<h5>There are no products in this category</h5>"; //output a message
+echo "<h5>There are no properties in this category</h5>"; //output a message
 echo "</div>";
 }
 mysqli_close($link); //close the connection

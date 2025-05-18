@@ -33,16 +33,7 @@
         
             <textarea class="form-control" id="form4Example3" name="message" rows="4" placeholder="Enter your message" required></textarea>
     </div>
-    <div class="form-check d-flex justify-content-center mb-4">
-        <input
-        class="form-check-input me-2"
-        type="checkbox"
-        value=""
-        id="form4Example4"
-        checked
-        />
-        
-    </div>
+   
     <div class="text-center">  
     <button type="submit" name="submit" class="btn btn-warning btn-block mb-4 w-100">Send</button>
     </div>

@@ -24,48 +24,44 @@
 <div class="feedback">
 <?php
 require 'connect.php';
-if(isset($_POST['submit'])) {
-$vendor_email=mysqli_real_escape_string($link,$_POST['vendor_email']);
-$vendor_firstname=mysqli_real_escape_string($link,$_POST['vendor_firstname']);
-$vendor_surname=mysqli_real_escape_string($link,$_POST['vendor_surname']);
-$vendor_phone=mysqli_real_escape_string($link,$_POST['vendor_phone']);
 
-
-// Checks if vendor already exists in the database or not via vendor_email primary key. 
-
-$sql_check_vendor="SELECT * FROM vendor WHERE vendor_email='$vendor_email'";
-$result=mysqli_query($link, $sql_check_vendor);
-if(mysqli_num_rows($result)>0)
-{
-    echo "<h3>Warning</h3>";
-    echo "<p>This vendor already exists </p>";
-    echo "<p>Please instead use the update option for the vendor with the email <strong>$vendor_email</strong>.</p>";
-    echo "<a href='managevendors.php' class='btn btn-outline-warning' >Return to Vendor Admin page</a>";
-    
-}
-else {
-// Inserts new vendor into the database. 
-$sql_insert="INSERT INTO vendor(vendor_email, vendor_firstname, vendor_surname, vendor_phone) VALUES ('$vendor_email', '$vendor_firstname', '$vendor_surname', '$vendor_phone')";
-if(mysqli_query($link, $sql_insert)) {
-    echo "Vendor has been successfully added <p>";
-    echo "<a class='btn btn-outline-warning mt-5' href='managevendors.php'>Return to Manage Vendors page</a>";
-    
-    }
-    else {
-      echo "An error occurred, try again!";
-      echo "<pre>".mysqli_error($link)."</pre>";
+if (isset($_POST['submit'])) {
+    if (empty($_POST['vendor_email']) || empty($_POST['vendor_firstname']) || empty($_POST['vendor_surname']) || empty($_POST['vendor_phone'])) {
+        echo "<h3>Error</h3>";
+        echo "<p>All fields are required. Please fill in all fields.</p>";
+        echo "<a href='addvendor.php' class='btn btn-outline-warning'>Return to Add Vendor</a>";
+        exit;
     }
 
-   // checks to be sure there is a value present for the vendor email
- if (empty($_POST['vendor_email'])) {
-    echo "Error: Vendor email must be selected.";
-    exit;
-  }
-    
+    $vendor_email = mysqli_real_escape_string($link, $_POST['vendor_email']);
+    $vendor_firstname = mysqli_real_escape_string($link, $_POST['vendor_firstname']);
+    $vendor_surname = mysqli_real_escape_string($link, $_POST['vendor_surname']);
+    $vendor_phone = mysqli_real_escape_string($link, $_POST['vendor_phone']);
+
+    // Check if vendor already exists in the database
+    $sql_check_vendor = "SELECT * FROM vendor WHERE vendor_email='$vendor_email'";
+    $result = mysqli_query($link, $sql_check_vendor);
+
+    if (mysqli_num_rows($result) > 0) {
+        echo "<h3>Warning</h3>";
+        echo "<p>This vendor already exists.</p>";
+        echo "<p>Please instead use the update option for the vendor with the email <strong>$vendor_email</strong>.</p>";
+        echo "<a href='managevendors.php' class='btn btn-outline-warning'>Return to Vendor Admin page</a>";
+    } else {
+        $sql_insert = "INSERT INTO vendor(vendor_email, vendor_firstname, vendor_surname, vendor_phone)
+                       VALUES ('$vendor_email', '$vendor_firstname', '$vendor_surname', '$vendor_phone')";
+        if (mysqli_query($link, $sql_insert)) {
+            echo "Vendor has been successfully added <p>";
+            echo "<a class='btn btn-outline-warning mt-5' href='managevendors.php'>Return to Manage Vendors page</a>";
+        } else {
+            echo "An error occurred, try again!";
+            echo "<pre>" . mysqli_error($link) . "</pre>";
+        }
     }
 }
-    mysqli_close($link);
-    ?>
+mysqli_close($link);
+?>
+
     </div>
     
 </section>
