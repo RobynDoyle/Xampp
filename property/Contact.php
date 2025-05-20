@@ -34,10 +34,11 @@
        
         <!-- navbar adapted from https://getbootstrap.com/docs/5.0/examples/navbars/ where i got the code by right clicking and selecting inspect and getitng the code -->
         <?php include("includes/nav.php");?>
-
+        <h1 class="d-flex flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-center">Contact</h1>
           <!-- CONTACT details list adapted from https://getbootstrap.com/docs/5.3/examples/list-groups/ -->
           <div class="d-flex flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-center">
-            <div class="list-group">
+            
+          <div class="list-group">
               <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
                 <i class="bi bi-clock-fill text-warning fs-4"></i>
                 <div class="d-flex gap-2 w-100 justify-content-between">
